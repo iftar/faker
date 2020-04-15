@@ -36,6 +36,24 @@ class AuthApiController {
       }
     });
   }
+
+  async register({ request, response, view }) {
+    response.json({
+      "status": "success",
+      "data": {
+          "user": {
+              "first_name": "Jane",
+              "last_name": "Bane",
+              "email": "jane.bane@gmail.com",
+              "type": "user",
+              "status": "approved",
+              "updated_at": "2020-04-15T20:33:08.000000Z",
+              "created_at": "2020-04-15T20:33:08.000000Z",
+              "id": 32
+          }
+      }
+    });
+  }
 }
 
 module.exports = AuthApiController
